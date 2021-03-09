@@ -1,0 +1,22 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<br/>
+
+<h1>Результаты теста:</h1>
+<div style="padding:2em">
+    Ваш цефальный индекс = {{ ci }}%
+</div>
+<div style="padding:2em">
+{% if measure=='no' and lang=='no' %}
+    <h2>Советуем вам заняться изучением языков!</h2>
+{% elif measure=='no' and lang=='yes' %}
+    <h2>Неудивительные результаты...</h2>
+{% elif measure=='yes' and lang=='no' %}
+    <h2>Вы случаем не сверхчеловек?</h2>
+{% else %}
+    <h2>((()))</h2>
+{% endif %}
+
+{% endblock %}
+</div>
